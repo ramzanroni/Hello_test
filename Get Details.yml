@@ -13,3 +13,72 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: Test 1
+    request:
+      url: https://jsonplaceholder.typicode.com/todos/1
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: date
+          value: Fri, 27 Mar 2026 16:48:20 GMT
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: cache-control
+          value: max-age=43200
+        - name: etag
+          value: W/"53-hfEnumeNh6YirfjyjaujcOPPT+s"
+        - name: expires
+          value: "-1"
+        - name: nel
+          value: '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+        - name: pragma
+          value: no-cache
+        - name: report-to
+          value: '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=JIn0GMOW31R62gFy4ADGFKzh4maUv9CC9rpeEw0CG44%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1774372407"}],"max_age":3600}'
+        - name: reporting-endpoints
+          value: heroku-nel="https://nel.heroku.com/reports?s=JIn0GMOW31R62gFy4ADGFKzh4maUv9CC9rpeEw0CG44%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1774372407"
+        - name: server
+          value: cloudflare
+        - name: vary
+          value: Origin, Accept-Encoding
+        - name: via
+          value: 2.0 heroku-router
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-powered-by
+          value: Express
+        - name: x-ratelimit-limit
+          value: "1000"
+        - name: x-ratelimit-remaining
+          value: "966"
+        - name: x-ratelimit-reset
+          value: "1774372458"
+        - name: age
+          value: "23974"
+        - name: server-timing
+          value: cfCacheStatus;desc="HIT", cfEdge;dur=6,cfOrigin;dur=0
+        - name: cf-cache-status
+          value: HIT
+        - name: cf-ray
+          value: 9e2fe1d2e9fa311c-DAC
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+            "userId": 1,
+            "id": 1,
+            "title": "delectus aut autem",
+            "completed": false
+          }
